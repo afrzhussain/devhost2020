@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Gilmer-outline";
+  src: url("../assets/font/Gilmer/OTF/Gilmer\ Outline.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-regular";
+  src: url("../assets/font/Gilmer/OTF/Gilmer\ Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-medium";
+  src: url("../assets/font/Gilmer/OTF/Gilmer\ Medium.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-bold";
+  src: url("../assets/font/Gilmer/OTF/Gilmer\ Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-heavy";
+  src: url("../assets/font/Gilmer/OTF/Gilmer\ Heavy.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilmer-light";
+  src: url("../assets/font/Gilmer/OTF/Gilmer\ Light.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #151515;
+}
+
+p {
+  font-family: Gilmer-regular;
+}

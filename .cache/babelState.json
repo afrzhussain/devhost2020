@@ -1,0 +1,76 @@
+{
+  "stages": {
+    "develop": {
+      "plugins": [
+        {
+          "name": "styled-jsx/babel",
+          "options": {
+            "optimizeForSpeed": true,
+            "sourceMaps": false,
+            "vendorPrefixes": true
+          }
+        }
+      ],
+      "presets": [],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    },
+    "develop-html": {
+      "plugins": [
+        {
+          "name": "styled-jsx/babel",
+          "options": {
+            "optimizeForSpeed": true,
+            "sourceMaps": false,
+            "vendorPrefixes": true
+          }
+        }
+      ],
+      "presets": [],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    },
+    "build-html": {
+      "plugins": [
+        {
+          "name": "styled-jsx/babel",
+          "options": {
+            "optimizeForSpeed": true,
+            "sourceMaps": false,
+            "vendorPrefixes": true
+          }
+        }
+      ],
+      "presets": [],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    },
+    "build-javascript": {
+      "plugins": [
+        {
+          "name": "styled-jsx/babel",
+          "options": {
+            "optimizeForSpeed": true,
+            "sourceMaps": false,
+            "vendorPrefixes": true
+          }
+        }
+      ],
+      "presets": [],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    }
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
+}
