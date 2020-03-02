@@ -68,6 +68,40 @@ const LandingPage = () => {
             margin-right: 8px;
             font-size: 30px;
           }
+          .svg-x {
+            padding-top: 75px;
+            padding-left: 15px;
+          }
+          .red-rectangle {
+            display: none;
+            /* Rectangle 6 */
+            z-index: -1;
+            position: absolute;
+            width: 300px;
+            height: 350px;
+
+            background: #d32f2f;
+          }
+          .count-down {
+            width: 100%;
+            text-align: left;
+            margin-left: 155px;
+          }
+          .Number {
+            margin-right: 20px;
+            font-family: Gilmer-outline;
+            font-size: 70px;
+          }
+          .prefix {
+            padding-left: 20px;
+            font-family: Gilmer-heavy;
+            font-size: 30px;
+          }
+          .content_2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+          }
         `}
       </style>
       <div className="parent-div">
@@ -98,8 +132,66 @@ const LandingPage = () => {
                 <p className="medium-text"> 2020</p>
               </div>
             </div>
+            <div className="svg-x">
+              <svg
+                width="58"
+                height="58"
+                viewBox="0 0 78 78"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.86562 51.6282L0.342072 55.2123L23.2589 77.8476L26.7825 74.2635L3.86562 51.6282Z"
+                  fill="#D32F2F"
+                />
+                <path
+                  d="M23.0552 51.4873L0.4729 74.458L4.04865 77.9898L26.6309 55.0191L23.0552 51.4873Z"
+                  fill="#D32F2F"
+                />
+                <path
+                  d="M3.52623 0.51921L0.00268555 4.10336L22.9196 26.7387L26.4431 23.1545L3.52623 0.51921Z"
+                  fill="#585857"
+                />
+                <path
+                  d="M22.7162 0.378047L0.133942 23.3488L3.70969 26.8806L26.292 3.90987L22.7162 0.378047Z"
+                  fill="#585857"
+                />
+                <path
+                  d="M54.7395 0.144209L51.2159 3.72836L74.1328 26.3637L77.6563 22.7795L54.7395 0.144209Z"
+                  fill="#D32F2F"
+                />
+                <path
+                  d="M73.9497 0.0033186L51.3675 22.974L54.9432 26.5059L77.5255 3.53514L73.9497 0.0033186Z"
+                  fill="#D32F2F"
+                />
+                <path
+                  d="M55.0788 51.2762L51.5553 54.8604L74.4722 77.4957L77.9957 73.9115L55.0788 51.2762Z"
+                  fill="#585857"
+                />
+                <path
+                  d="M74.2887 51.1374L51.7064 74.1082L55.2822 77.64L77.8645 54.6693L74.2887 51.1374Z"
+                  fill="#585857"
+                />
+              </svg>
+            </div>
           </div>
-          <div className={"content_2"}></div>
+          <div className={"content_2"}>
+            <div className="count-down">
+              <p className="Number">
+                15<span className="prefix">DAYS</span>
+              </p>
+              <p className="Number">
+                10<span className="prefix">HOURS</span>
+              </p>
+              <p className="Number">
+                30<span className="prefix">MIN</span>
+              </p>
+              <p className="Number">
+                50<span className="prefix">SEC</span>
+              </p>
+            </div>
+            <div className="red-rectangle"></div>
+          </div>
         </div>
       </div>
     </main>
