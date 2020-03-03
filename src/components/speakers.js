@@ -89,6 +89,50 @@ const Speakers = () => {
           height: 7px;
           background-color: red;
         }
+
+        @media (max-width: 1024px) {
+          .title {
+            text-align: center;
+          }
+          .holder {
+            justify-content: center;
+            flex-direction: column;
+          }
+          .svg-x {
+            align-self: center;
+          }
+
+          .underline-div {
+            align-self: center;
+          }
+
+          .cards {
+            margin-top: 30px;
+          }
+        }
+        @media (max-width: 766px) {
+          .title {
+            font-size: 60px;
+          }
+          .prefix {
+            font-size: 30px;
+          }
+          .red-underline {
+            width: 180px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .red-underline {
+            width: 150px;
+          }
+          .title {
+            font-size: 40px;
+          }
+          .prefix {
+            font-size: 20px;
+          }
+        }
       `}</style>
       <div className="parent-div">
         <div className="holder">

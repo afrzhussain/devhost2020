@@ -1,5 +1,5 @@
 import React from "react";
-
+import About from "./about";
 const LandingPage = () => {
   return (
     <main>
@@ -72,16 +72,7 @@ const LandingPage = () => {
             padding-top: 75px;
             padding-left: 15px;
           }
-          .red-rectangle {
-            display: none;
-            /* Rectangle 6 */
-            z-index: -1;
-            position: absolute;
-            width: 300px;
-            height: 350px;
 
-            background: #d32f2f;
-          }
           .count-down {
             width: 100%;
             text-align: left;
@@ -101,6 +92,76 @@ const LandingPage = () => {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
+          }
+
+          @media (max-width: 766px) {
+            .Student {
+              font-size: 30px;
+            }
+            .dev {
+              font-size: 50px;
+            }
+          }
+          @media (max-width: 1024px) {
+            .parent-div {
+              height: 100%;
+            }
+            .content_1 {
+              margin-top: 100px;
+              justify-content: center;
+              flex-direction: column;
+            }
+            .svg-x {
+              align-self: center;
+              padding-top: 50px;
+              padding-left: 0px;
+            }
+            .twenty {
+              text-align: center;
+            }
+            .hero-title_2 {
+              justify-content: center;
+            }
+            .hero-title_1 {
+              flex-direction: column;
+              justify-content: center;
+              text-align: center;
+            }
+            .red-underline {
+              align-self: center;
+            }
+            .content-holder {
+              flex-direction: column;
+            }
+            .content_2 {
+              height: 100%;
+              width: 100%;
+              margin-top: 80px;
+              justify-content: center;
+            }
+
+            .count-down {
+              text-align: center;
+              margin-left: 0px;
+            }
+          }
+          @media (max-width: 480px) {
+            .Number {
+              font-size: 60px;
+            }
+            .prefix {
+              font-size: 20px;
+            }
+            .Student {
+              font-size: 20px;
+            }
+            .dev {
+              font-size: 30px;
+            }
+
+            .red-underline {
+              width: 100px;
+            }
           }
         `}
       </style>

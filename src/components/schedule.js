@@ -84,6 +84,64 @@ const Schedule = () => {
           flex-direction: column;
           justify-content: center;
         }
+
+        @media (max-width: 1024px) {
+          .parent-div {
+            margin-top: 100px;
+            flex-direction: column;
+          }
+          .title {
+            text-align: center;
+          }
+          .underline-div {
+            align-self: center;
+          }
+          .svg-x {
+            align-self: center;
+            margin-left: 0px;
+          }
+          .schedule-holder {
+            flex-direction: column;
+          }
+          .title-holder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+        @media (max-width: 766px) {
+          .title {
+            font-size: 60px;
+          }
+
+          .prefix {
+            font-size: 30px;
+          }
+          .red-underline {
+            width: 180px;
+          }
+          .About-content {
+            font-size: 15px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .red-underline {
+            width: 150px;
+          }
+          .title {
+            font-size: 40px;
+          }
+          .prefix {
+            font-size: 20px;
+          }
+          .About-content {
+            font-size: 14px;
+          }
+          .content {
+            padding: 15px;
+          }
+        }
       `}</style>
       <div className="parent-div">
         <div className="title-holder">

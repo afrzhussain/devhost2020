@@ -4,9 +4,6 @@ const About = () => {
   return (
     <main>
       <style jsx>{`
-        main {
-          margin-top: 100px;
-        }
         .parent-div {
           color: white;
           display: flex;
@@ -66,7 +63,7 @@ const About = () => {
         }
         .card-holder {
           width: 100%;
-          margin: 30px;
+
           margin-top: 70px;
           color: white;
         }
@@ -74,8 +71,10 @@ const About = () => {
           width: 100%;
           display: flex;
           justify-content: space-evenly;
+          flex-wrap: wrap;
         }
         .card {
+          margin: 20px;
           background-color: #272727;
           width: 280px;
         }
@@ -93,6 +92,51 @@ const About = () => {
           flex-direction: column;
 
           padding: 30px;
+        }
+        @media (max-width: 1024px) {
+          .parent-div {
+            margin-top: 100px;
+            flex-direction: column;
+          }
+          .title {
+            text-align: center;
+          }
+
+          .underline-div {
+            justify-content: center;
+          }
+        }
+        @media (max-width: 766px) {
+          .title {
+            font-size: 60px;
+          }
+          .prefix {
+            font-size: 30px;
+          }
+          .red-underline {
+            width: 180px;
+          }
+          .About-content {
+            font-size: 15px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .red-underline {
+            width: 150px;
+          }
+          .title {
+            font-size: 40px;
+          }
+          .prefix {
+            font-size: 20px;
+          }
+          .About-content {
+            font-size: 14px;
+          }
+          .content {
+            padding: 15px;
+          }
         }
       `}</style>
       <div className="parent-div">

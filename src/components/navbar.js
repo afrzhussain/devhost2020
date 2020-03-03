@@ -5,6 +5,8 @@ const Navbar = () => {
     <main>
       <style jsx>
         {`
+          @import "../assets/sass/_variables.scss";
+
           p {
             margin: 0px;
           }
@@ -31,6 +33,10 @@ const Navbar = () => {
           }
           .nav-holder {
             display: flex;
+            flex-direction: row;
+            
+          }
+     
           }
 
           .nav-options {
@@ -51,6 +57,33 @@ const Navbar = () => {
             font-family: Gilmer-medium;
             font-size: 15px;
           }
+
+          @media (max-width: 766px) {
+         .nav-holder{
+           flex-direction:column;
+
+         }
+         .option-holder{
+           margin-top:40px;
+           flex-basis:100%;
+         }
+         .nav-options{
+         
+           justify-content:space-evenly;
+         }
+        }
+
+
+        @media (max-width: 480px) {
+         .nav-holder{
+           flex-direction:column;
+
+         }
+         .option-holder{
+          display:none;
+         }
+        
+        }
         `}
       </style>
 
