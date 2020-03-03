@@ -153,10 +153,10 @@ const LandingPage = () => {
               font-size: 20px;
             }
             .Student {
-              font-size: 20px;
+              font-size: 30px;
             }
             .dev {
-              font-size: 30px;
+              font-size: 40px;
             }
 
             .red-underline {
