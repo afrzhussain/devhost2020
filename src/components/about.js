@@ -64,6 +64,36 @@ const About = () => {
           font-size: 17px;
           word-spacing: 4px;
         }
+        .card-holder {
+          width: 100%;
+          margin: 30px;
+          margin-top: 70px;
+          color: white;
+        }
+        .cards {
+          width: 100%;
+          display: flex;
+          justify-content: space-evenly;
+        }
+        .card {
+          background-color: #272727;
+          width: 280px;
+        }
+        .card-content {
+          font-family: Gilmer-light;
+          font-size: 15px;
+        }
+        .card-title {
+          font-family: Gilmer-heavy;
+          font-size: 25px;
+        }
+        .card-text {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          padding: 30px;
+        }
       `}</style>
       <div className="parent-div">
         <div className="holder">
@@ -121,7 +151,7 @@ const About = () => {
               </svg>
             </div>
             <div className="About-content">
-              DevHost:2020 is the annual flagship event of SOSC. Our prime goal
+              devHost:2020 is the annual flagship event of SOSC. Our prime goal
               is to bring young and skilled developers from in and around
               Karnataka under the same roof.
               <br />
@@ -141,6 +171,46 @@ const About = () => {
         </div>
         <div className="illus"></div>
       </div>{" "}
+      <div className="card-holder">
+        <div className="cards">
+          <div className="card">
+            <div className="card-text">
+              {" "}
+              <p className="card-title">24Hour Hackathon</p>
+              <p className="card-content">
+                {" "}
+                devHost:2020 is the annual flagship event of SOSC. Our prime
+                goal is to bring young and skilled developers from in and around
+                Karnataka under the same roof.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-text">
+              {" "}
+              <p className="card-title">24Hour Hackathon</p>
+              <p className="card-content">
+                {" "}
+                devHost:2020 is the annual flagship event of SOSC. Our prime
+                goal is to bring young and skilled developers from in and around
+                Karnataka under the same roof.
+              </p>
+            </div>
+          </div>
+          <div className="card">
+            <div className="card-text">
+              {" "}
+              <p className="card-title">24Hour Hackathon</p>
+              <p className="card-content">
+                {" "}
+                devHost:2020 is the annual flagship event of SOSC. Our prime
+                goal is to bring young and skilled developers from in and around
+                Karnataka under the same roof.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   );
 };
