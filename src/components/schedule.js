@@ -145,7 +145,7 @@ const Schedule = () => {
       `}</style>
       <div className="parent-div">
         <div className="title-holder">
-          <p className="title">Schedule</p>
+          <p className="title" id="schedule">Schedule</p>
           <div className="underline-div">
             {" "}
             <div className={"red-underline"}></div>

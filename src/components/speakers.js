@@ -137,7 +137,7 @@ const Speakers = () => {
       <div className="parent-div">
         <div className="holder">
           <div className="title-holder">
-            <p className="title">Speakers</p>
+            <p className="title" id="speakers">Speakers</p>
             <div className="underline-div">
               {" "}
               <div className={"red-underline"}></div>

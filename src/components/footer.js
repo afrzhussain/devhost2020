@@ -39,7 +39,7 @@ const Footer = () => {
           justify-content: space-evenly;
         }
       `}</style>
-      <div className="parent-div">
+      <div className="parent-div" id="contact">
         <div className="images"></div>
         <div className="content">
           <div className="text">

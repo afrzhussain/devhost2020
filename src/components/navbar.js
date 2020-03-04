@@ -99,22 +99,22 @@ const Navbar = () => {
           <div className={"option-holder"}>
             {" "}
             <div className={"nav-options"}>
-              <a className={"nav-option"} to={"#"}>
+              <a className={"nav-option"} href={"#"}>
                 Home
               </a>
-              <a className="nav-option" to={"#"}>
+              <a className="nav-option" href={"#about"}>
                 About
               </a>
-              <a className="nav-option" to={"#"}>
-                Scehdule
+              <a className="nav-option" href={"#schedule"}>
+                Schedule
               </a>
-              <a className="nav-option" to={"#"}>
+              <a className="nav-option" href={"#speakers"}>
                 Speakers
               </a>
-              <a className="nav-option" to={"#"}>
+              <a className="nav-option" href={"#sponsors"}>
                 Sponsors
               </a>
-              <a className="nav-option" to={"#"}>
+              <a className="nav-option" href={"#contact"}>
                 Contact
               </a>
             </div>

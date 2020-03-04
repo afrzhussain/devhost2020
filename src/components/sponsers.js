@@ -86,7 +86,7 @@ const Sponser = () => {
       `}</style>
       <div className="parent-div">
         <div className="title-holder">
-          <p className="title">Sponsors</p>
+          <p className="title" id="sponsors">Sponsors</p>
           <div className="underline-div">
             {" "}
             <div className={"red-underline"}></div>

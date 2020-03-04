@@ -142,7 +142,7 @@ const About = () => {
       <div className="parent-div">
         <div className="holder">
           <div className="title-holder">
-            <p className="title">
+            <p id="about" className="title">
               About <span className="prefix">devhost</span>
             </p>
           </div>
