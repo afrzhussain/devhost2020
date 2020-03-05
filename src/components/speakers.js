@@ -12,6 +12,41 @@ const Speakers = () => {
           }
         }
       }
+      jayesh: file(relativePath: { eq: "images/jayesh-kr.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      rumaan: file(relativePath: { eq: "images/rumaan-k.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      girish: file(relativePath: { eq: "images/girish-p.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      supriya: file(relativePath: { eq: "images/supriya-s.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      musthaq: file(relativePath: { eq: "images/musthaq-a.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   `);
   console.log(data);
@@ -192,80 +227,67 @@ const Speakers = () => {
               {" "}
               <div className="card-image">
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
-                  alt="A corgi smiling happily"
+                  fluid={data.jayesh.childImageSharp.fluid}
+                  alt="Jayesh Katta Ramalingaiah"
                 />
               </div>
               <div className="card-line-red"></div>
-              <div className="card-title">Musthak</div>
-              <div className="card-title-designation">Github Campus export</div>
+              <div className="card-title">Jayesh Katta Ramalingaiah</div>
+              <div className="card-title-designation">Official Mozilla Representative</div>
             </div>
             <div className="card">
               {" "}
               <div className="card-image">
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
-                  alt="A corgi smiling happily"
+                  fluid={data.rumaan.childImageSharp.fluid}
+                  alt="Rumaan Khalander"
                 />
               </div>
               <div className="card-line-red"></div>
-              <div className="card-title">Musthak</div>
-              <div className="card-title-designation">Github Campus export</div>
+              <div className="card-title">Rumaan Khalander</div>
+              <div className="card-title-designation">Full Stack Developer</div>
               <div></div>
             </div>
             <div className="card">
               {" "}
               <div className="card-image">
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
-                  alt="A corgi smiling happily"
+                  fluid={data.girish.childImageSharp.fluid}
+                  alt="Girish Patil"
                 />
               </div>
               <div className="card-line-red"></div>
-              <div className="card-title">Musthak</div>
-              <div className="card-title-designation">Github Campus export</div>
+              <div className="card-title">Girish Patil</div>
+              <div className="card-title-designation">GDG Hubli organizer</div>
               <div></div>
             </div>
             <div className="card">
               {" "}
               <div className="card-image">
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
-                  alt="A corgi smiling happily"
+                  fluid={data.supriya.childImageSharp.fluid}
+                  alt="Supriya S"
                 />
               </div>
               <div className="card-line-red"></div>
-              <div className="card-title">Musthak</div>
-              <div className="card-title-designation">Github Campus export</div>
+              <div className="card-title">Supriya S</div>
+              <div className="card-title-designation">Women Tech Maker</div>
               <div></div>
             </div>
             <div className="card">
               {" "}
               <div className="card-image">
                 <Img
-                  fluid={data.file.childImageSharp.fluid}
-                  alt="A corgi smiling happily"
+                  fluid={data.musthaq.childImageSharp.fluid}
+                  alt="Musthaq Ahamad"
                 />
               </div>
               <div className="card-line-red"></div>
-              <div className="card-title">Musthak</div>
-              <div className="card-title-designation">Github Campus export</div>
+              <div className="card-title">Musthaq Ahamad</div>
+              <div className="card-title-designation">UX Engineer</div>
               <div></div>
             </div>
-            <div className="card">
-              {" "}
-              <div className="card-image">
-                <Img
-                  fluid={data.file.childImageSharp.fluid}
-                  alt="A corgi smiling happily"
-                />
-              </div>
-              <div className="card-line-red"></div>
-              <div className="card-title">Musthak</div>
-              <div className="card-title-designation">Github Campus export</div>
-              <div></div>
             </div>
-          </div>
         </div>
       </div>
     </main>
