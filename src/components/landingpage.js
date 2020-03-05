@@ -239,16 +239,20 @@ const LandingPage = () => {
           <div className={"content_2"}>
             <div className="count-down">
               <p className="Number">
-                15<span className="prefix">DAYS</span>
+                <days id="days">15</days>
+                <span className="prefix">DAYS</span>
               </p>
               <p className="Number">
-                10<span className="prefix">HOURS</span>
+                <hours id="hours">10</hours>
+                <span className="prefix">HOURS</span>
               </p>
               <p className="Number">
-                30<span className="prefix">MIN</span>
+                <min id="min">30</min>
+                <span className="prefix">MIN</span>
               </p>
               <p className="Number">
-                50<span className="prefix">SEC</span>
+                <sec id="sec">50</sec>
+                <span className="prefix">SEC</span>
               </p>
             </div>
             <div className="red-rectangle"></div>
@@ -260,3 +264,40 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 20, 2020 9:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+  // If the count down is finished
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("days").innerHTML= 0;
+  document.getElementById("hours").innerHTML= 0;
+  document.getElementById("min").innerHTML= 0;
+  document.getElementById("sec").innerHTML= 0;
+  }
+
+  //Else Display the Values in the elements with id
+  else{
+  document.getElementById("days").innerHTML= days;
+  document.getElementById("hours").innerHTML= hours;
+  document.getElementById("min").innerHTML= minutes;
+  document.getElementById("sec").innerHTML= seconds;
+  }
+
+}, 1000);
