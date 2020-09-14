@@ -21,11 +21,11 @@ const Navbar = () => {
           }
           .dev {
             font-family: Gilmer-bold;
-            font-size: 30px;
+            font-size: 25px;
           }
           .host {
             font-family: Gilmer-outline;
-            font-size: 30px;
+            font-size: 25px;
           }
           .twenty {
             font-family: Gilmer-bold;
@@ -55,7 +55,7 @@ const Navbar = () => {
             margin: 0;
             text-decoration: none;
             font-family: Gilmer-medium;
-            font-size: 15px;
+            font-size: 12px;
           }
 
           @media (max-width: 766px) {

@@ -10,6 +10,7 @@ import Schedule from "./schedule";
 import Sponsers from "./sponsers";
 import Footer from "./footer";
 import "./layout.css";
+import "animate.css/animate.min.css";
 
 const Layout = ({ children }) => {
   return (

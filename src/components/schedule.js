@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const Schedule = () => {
   return (
@@ -45,7 +46,7 @@ const Schedule = () => {
         .title {
           color: white;
           font-family: Gilmer-heavy;
-          font-size: 70px;
+          font-size: 55px;
           text-align: left;
         }
         .schedule-content {
@@ -85,6 +86,17 @@ const Schedule = () => {
           justify-content: center;
         }
 
+        .Notice {
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          color: grey;
+          padding: 50px;
+          font-family: Gilmer-bold;
+          font-size: 30px;
+          margin-top: 100px;
+        }
+
         @media (max-width: 1024px) {
           .parent-div {
             margin-top: 100px;
@@ -108,6 +120,16 @@ const Schedule = () => {
             flex-direction: column;
             justify-content: center;
           }
+          .Notice {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: grey;
+            padding: 30px;
+            font-family: Gilmer-bold;
+            font-size: 20px;
+            margin-top: 50px;
+          }
         }
         @media (max-width: 766px) {
           .title {
@@ -122,6 +144,17 @@ const Schedule = () => {
           }
           .About-content {
             font-size: 15px;
+          }
+
+          .Notice {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: grey;
+            padding: 20px;
+            font-family: Gilmer-bold;
+            font-size: 20px;
+            margin-top: 20px;
           }
         }
 
@@ -141,59 +174,74 @@ const Schedule = () => {
           .content {
             padding: 15px;
           }
+
+          .Notice {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            color: grey;
+            padding: 16px;
+            font-family: Gilmer-bold;
+            font-size: 16px;
+            margin-top: 10px;
+          }
         }
       `}</style>
       <div className="parent-div">
-        <div className="title-holder">
-          <p className="title">Schedule</p>
-          <div className="underline-div">
-            {" "}
-            <div className={"red-underline"}></div>
-          </div>{" "}
-        </div>
-        <div className="svg-x">
-          <svg
-            width="58"
-            height="58"
-            viewBox="0 0 78 78"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M3.86562 51.6282L0.342072 55.2123L23.2589 77.8476L26.7825 74.2635L3.86562 51.6282Z"
-              fill="#D32F2F"
-            />
-            <path
-              d="M23.0552 51.4873L0.4729 74.458L4.04865 77.9898L26.6309 55.0191L23.0552 51.4873Z"
-              fill="#D32F2F"
-            />
-            <path
-              d="M3.52623 0.51921L0.00268555 4.10336L22.9196 26.7387L26.4431 23.1545L3.52623 0.51921Z"
-              fill="#585857"
-            />
-            <path
-              d="M22.7162 0.378047L0.133942 23.3488L3.70969 26.8806L26.292 3.90987L22.7162 0.378047Z"
-              fill="#585857"
-            />
-            <path
-              d="M54.7395 0.144209L51.2159 3.72836L74.1328 26.3637L77.6563 22.7795L54.7395 0.144209Z"
-              fill="#D32F2F"
-            />
-            <path
-              d="M73.9497 0.0033186L51.3675 22.974L54.9432 26.5059L77.5255 3.53514L73.9497 0.0033186Z"
-              fill="#D32F2F"
-            />
-            <path
-              d="M55.0788 51.2762L51.5553 54.8604L74.4722 77.4957L77.9957 73.9115L55.0788 51.2762Z"
-              fill="#585857"
-            />
-            <path
-              d="M74.2887 51.1374L51.7064 74.1082L55.2822 77.64L77.8645 54.6693L74.2887 51.1374Z"
-              fill="#585857"
-            />
-          </svg>
-        </div>
-        <div className="schedule">
+        <ScrollAnimation animateIn="fadeIn">
+          <div className="title-holder">
+            <p className="title">Schedule</p>
+            <div className="underline-div">
+              {" "}
+              <div className={"red-underline"}></div>
+            </div>{" "}
+          </div>
+          <div className="svg-x">
+            <svg
+              width="58"
+              height="58"
+              viewBox="0 0 78 78"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.86562 51.6282L0.342072 55.2123L23.2589 77.8476L26.7825 74.2635L3.86562 51.6282Z"
+                fill="#D32F2F"
+              />
+              <path
+                d="M23.0552 51.4873L0.4729 74.458L4.04865 77.9898L26.6309 55.0191L23.0552 51.4873Z"
+                fill="#D32F2F"
+              />
+              <path
+                d="M3.52623 0.51921L0.00268555 4.10336L22.9196 26.7387L26.4431 23.1545L3.52623 0.51921Z"
+                fill="#585857"
+              />
+              <path
+                d="M22.7162 0.378047L0.133942 23.3488L3.70969 26.8806L26.292 3.90987L22.7162 0.378047Z"
+                fill="#585857"
+              />
+              <path
+                d="M54.7395 0.144209L51.2159 3.72836L74.1328 26.3637L77.6563 22.7795L54.7395 0.144209Z"
+                fill="#D32F2F"
+              />
+              <path
+                d="M73.9497 0.0033186L51.3675 22.974L54.9432 26.5059L77.5255 3.53514L73.9497 0.0033186Z"
+                fill="#D32F2F"
+              />
+              <path
+                d="M55.0788 51.2762L51.5553 54.8604L74.4722 77.4957L77.9957 73.9115L55.0788 51.2762Z"
+                fill="#585857"
+              />
+              <path
+                d="M74.2887 51.1374L51.7064 74.1082L55.2822 77.64L77.8645 54.6693L74.2887 51.1374Z"
+                fill="#585857"
+              />
+            </svg>
+          </div>
+          <div className="Notice">
+            <p>Yet to be Announced</p>
+          </div>
+          {/* <div className="schedule">
           <div className="schedule-holder">
             <div className="day1">
               <div className="date-holder">
@@ -302,7 +350,8 @@ const Schedule = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        </ScrollAnimation>
       </div>
     </main>
   );

@@ -1,6 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+// import Fade from "react-reveal/Fade";
+import ScrollAnimation from "react-animate-on-scroll";
+
 import About from "./about";
+
 const LandingPage = () => {
+  const calculateTimeLeft = () => {
+    let year = new Date().getFullYear();
+    const difference = +new Date(`${year}-10-1`) - +new Date();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [year] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+  });
+
   return (
     <main>
       <style jsx>
@@ -8,6 +38,7 @@ const LandingPage = () => {
           .parent-div {
             height: calc(100vh - 100px);
             display: flex;
+            padding: 10px;
             flex-direction: column;
             justify-content: center;
           }
@@ -43,7 +74,7 @@ const LandingPage = () => {
           .Student {
             letter-spacing: 0px;
             font-family: Gilmer-medium;
-            font-size: 40px;
+            font-size: 30px;
           }
           .medium-text {
             font-family: Gilmer-medium;
@@ -54,7 +85,7 @@ const LandingPage = () => {
           .dev {
             letter-spacing: 5px;
             font-family: Gilmer-medium;
-            font-size: 60px;
+            font-size: 40px;
           }
           .red-underline {
             border-bottom: solid #d32f2f 6px;
@@ -81,7 +112,7 @@ const LandingPage = () => {
           .Number {
             margin-right: 20px;
             font-family: Gilmer-outline;
-            font-size: 70px;
+            font-size: 50px;
           }
           .prefix {
             padding-left: 20px;
@@ -166,94 +197,101 @@ const LandingPage = () => {
         `}
       </style>
       <div className="parent-div">
-        <div className={"content-holder"}>
-          <div className={"content_1"}>
-            <div className={"hero-section"}>
-              <div className="hero-title_1">
-                <p className="dev">
+        <ScrollAnimation animateIn="fadeIn">
+          <div className={"content-holder"}>
+            <div className={"content_1"}>
+              <div className={"hero-section"}>
+                {/* <Fade> */}{" "}
+                <div className="hero-title_1">
+                  <p className="dev">
+                    {" "}
+                    <span className={"Student"}>STUDENT &nbsp;</span>DEV-
+                  </p>
+                </div>
+                <div className="hero-title_1">
+                  <p className="dev"> CONFERENCE</p>
+                </div>
+                <div className="hero-title_1">
                   {" "}
-                  <span className={"Student"}>STUDENT &nbsp;</span>DEV-
+                  <div className={"red-underline"}></div>
+                </div>
+                <div className="hero-title_2">
+                  <p className="twenty"> 20-23</p>
+                </div>
+                <div className="hero-title_1">
+                  <p className="medium-text"> MARCH</p>
+                </div>
+                <div className="hero-title_1">
+                  <p className="medium-text"> 2020</p>
+                </div>
+                {/* </Fade> */}{" "}
+              </div>
+              <div className="svg-x">
+                <svg
+                  width="58"
+                  height="58"
+                  viewBox="0 0 78 78"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.86562 51.6282L0.342072 55.2123L23.2589 77.8476L26.7825 74.2635L3.86562 51.6282Z"
+                    fill="#D32F2F"
+                  />
+                  <path
+                    d="M23.0552 51.4873L0.4729 74.458L4.04865 77.9898L26.6309 55.0191L23.0552 51.4873Z"
+                    fill="#D32F2F"
+                  />
+                  <path
+                    d="M3.52623 0.51921L0.00268555 4.10336L22.9196 26.7387L26.4431 23.1545L3.52623 0.51921Z"
+                    fill="#585857"
+                  />
+                  <path
+                    d="M22.7162 0.378047L0.133942 23.3488L3.70969 26.8806L26.292 3.90987L22.7162 0.378047Z"
+                    fill="#585857"
+                  />
+                  <path
+                    d="M54.7395 0.144209L51.2159 3.72836L74.1328 26.3637L77.6563 22.7795L54.7395 0.144209Z"
+                    fill="#D32F2F"
+                  />
+                  <path
+                    d="M73.9497 0.0033186L51.3675 22.974L54.9432 26.5059L77.5255 3.53514L73.9497 0.0033186Z"
+                    fill="#D32F2F"
+                  />
+                  <path
+                    d="M55.0788 51.2762L51.5553 54.8604L74.4722 77.4957L77.9957 73.9115L55.0788 51.2762Z"
+                    fill="#585857"
+                  />
+                  <path
+                    d="M74.2887 51.1374L51.7064 74.1082L55.2822 77.64L77.8645 54.6693L74.2887 51.1374Z"
+                    fill="#585857"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div className={"content_2"}>
+              <div className="count-down">
+                <p className="Number">
+                  {timeLeft.days}
+                  <span className="prefix">DAYS</span>
+                </p>
+                <p className="Number">
+                  {timeLeft.hours}
+                  <span className="prefix">HOURS</span>
+                </p>
+                <p className="Number">
+                  {timeLeft.minutes}
+                  <span className="prefix">MIN</span>
+                </p>
+                <p className="Number">
+                  {timeLeft.seconds}
+                  <span className="prefix">SEC</span>
                 </p>
               </div>
-              <div className="hero-title_1">
-                <p className="dev"> CONFERENCE</p>
-              </div>
-              <div className="hero-title_1">
-                {" "}
-                <div className={"red-underline"}></div>
-              </div>
-
-              <div className="hero-title_2">
-                <p className="twenty"> 20-23</p>
-              </div>
-              <div className="hero-title_1">
-                <p className="medium-text"> MARCH</p>
-              </div>
-              <div className="hero-title_1">
-                <p className="medium-text"> 2020</p>
-              </div>
-            </div>
-            <div className="svg-x">
-              <svg
-                width="58"
-                height="58"
-                viewBox="0 0 78 78"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.86562 51.6282L0.342072 55.2123L23.2589 77.8476L26.7825 74.2635L3.86562 51.6282Z"
-                  fill="#D32F2F"
-                />
-                <path
-                  d="M23.0552 51.4873L0.4729 74.458L4.04865 77.9898L26.6309 55.0191L23.0552 51.4873Z"
-                  fill="#D32F2F"
-                />
-                <path
-                  d="M3.52623 0.51921L0.00268555 4.10336L22.9196 26.7387L26.4431 23.1545L3.52623 0.51921Z"
-                  fill="#585857"
-                />
-                <path
-                  d="M22.7162 0.378047L0.133942 23.3488L3.70969 26.8806L26.292 3.90987L22.7162 0.378047Z"
-                  fill="#585857"
-                />
-                <path
-                  d="M54.7395 0.144209L51.2159 3.72836L74.1328 26.3637L77.6563 22.7795L54.7395 0.144209Z"
-                  fill="#D32F2F"
-                />
-                <path
-                  d="M73.9497 0.0033186L51.3675 22.974L54.9432 26.5059L77.5255 3.53514L73.9497 0.0033186Z"
-                  fill="#D32F2F"
-                />
-                <path
-                  d="M55.0788 51.2762L51.5553 54.8604L74.4722 77.4957L77.9957 73.9115L55.0788 51.2762Z"
-                  fill="#585857"
-                />
-                <path
-                  d="M74.2887 51.1374L51.7064 74.1082L55.2822 77.64L77.8645 54.6693L74.2887 51.1374Z"
-                  fill="#585857"
-                />
-              </svg>
+              <div className="red-rectangle"></div>
             </div>
           </div>
-          <div className={"content_2"}>
-            <div className="count-down">
-              <p className="Number">
-                15<span className="prefix">DAYS</span>
-              </p>
-              <p className="Number">
-                10<span className="prefix">HOURS</span>
-              </p>
-              <p className="Number">
-                30<span className="prefix">MIN</span>
-              </p>
-              <p className="Number">
-                50<span className="prefix">SEC</span>
-              </p>
-            </div>
-            <div className="red-rectangle"></div>
-          </div>
-        </div>
+        </ScrollAnimation>
       </div>
     </main>
   );
